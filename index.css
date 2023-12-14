@@ -1,4 +1,7 @@
-/* --color-primary-: rgb(87, 245, 245); */
+body {
+    font-family: montserrat;
+}
+
 h1,
 h2,
 h3,
@@ -14,22 +17,150 @@ h6 {
     color: white;
 }
 
-.navbar {
+/* .nav {
     display: flex;
-    position: sticky;
     justify-content: space-between;
+
 }
 
-.navbar-list {
+.nav__list {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 0 10px;
 
+}
+
+.nav__item {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+
+}
+
+.nav__item:hover {
+    color: rgb(87, 245, 245);
+}
+
+@media screen and (max-width:600px) {
+    .nav__list {
+        flex-direction: column;
+        background-color: #978c8c44;
+        border-radius: 20px;
+        padding: 0 32px;
+        margin-left: 10px;
+    }
+
+    .nav__item {
+        padding: 10px 0;
+
+    }
+} */
+
+nav {
+    background: #424040;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+}
+
+a.active,
+a:hover {
+    color: rgb(87, 245, 245);
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #424242;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: rgb(87, 245, 245);
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
 }
 
 .profile {
     display: flex;
-    margin: 2rem 0;
+    margin: 24px 0;
     justify-content: space-around;
 }
 
@@ -59,7 +190,7 @@ h6 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 3rem;
+    margin: 0 6px;
 }
 
 .btn {
@@ -79,15 +210,9 @@ h6 {
 }
 
 .profile-image img {
-    width: 350px;
+    width: 80%;
 }
 
-/* .profile-image {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-} */
 
 @media screen and (max-width:700px) {
     .profile {
@@ -112,14 +237,14 @@ h6 {
 .cards {
     display: flex;
     /* justify-content: space-around; */
-    gap: 2rem;
+    gap: 16px;
 }
 
 
 
 
 .card {
-    padding: 1rem 0;
+    padding: 12px 0;
     background-color: #978c8c;
     display: flex;
     flex-direction: column;
@@ -135,8 +260,8 @@ h6 {
     margin: auto;
 }
 
-.card-content h3,
-p {
+.card-content {
+    margin-top: 8px;
     align-items: center;
     text-align: center;
 }
@@ -144,17 +269,19 @@ p {
 @media screen and (max-width:600px) {
     .cards {
         flex-direction: column;
-        gap: 1rem;
+        gap: 12px;
     }
 
     .card-content {
-        padding: 0 1rem;
+        padding: 0 12px;
     }
 
 }
-.form-heading{
-    margin: 15px 0;   
+
+.form-heading {
+    margin: 15px 0;
 }
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -165,19 +292,28 @@ p {
 .form-control-inputs {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 55%;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:620px) {
     .form-control-inputs {
-        width: 170%;
+        flex-direction: column;
+    }
+
+    .input-container input {
+        width: 200px;
+    }
+
+    .message-textarea textarea {
+        width: 200px;
     }
 }
 
 .input-container {
-    width: 25%;
+    width: 45%;
     margin: 0 15px;
 }
+
 input,
 textarea {
     width: 100%;
@@ -196,6 +332,5 @@ textarea {
 
 .message-textarea {
     padding: 8px;
-    width: 52%;
+    width: 51.5%;
 }
-

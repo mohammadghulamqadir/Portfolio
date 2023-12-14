@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="normlize.css" />
     <link rel="stylesheet" href="index.css" />
     <title>Portfolio</title>
   </head>
   <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Portfolio</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <div class="container">
-      <nav class="navbar">
-        <div class="name"><h3>Portfolio</h3></div>
-        <ul class="navbar-list">
-          <li class="navbar-list-item active">Home</li>
-          <li class="navbar-list-item">About</li>
-          <li class="navbar-list-item">Services</li>
-          <li class="navbar-list-item">Portfolio</li>
-          <li class="navbar-list-item">Contact</li>
-        </ul>
-      </nav>
       <div class="profile">
         <div class="profile-content">
           <h2 class="profile-heading-1">Hello, it's Me</h2>
@@ -110,20 +114,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container contact-form">
-      <div class="form-control-inputs">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email " />
-      </div>
-      <div class="form-control-inputs">
-        <input type="text" placeholder="Phone Number" />
-        <input type="text" placeholder="Subject" />
-      </div>
-      <div class="message-textarea">
-        <textarea cols="30" rows="10">Your Message</textarea>
-      </div>
-      <button class="btn btn-primary">Send Message</button>
-    </div> -->
     <div class="container contact-form">
       <h1 class="form-heading">Contact <span class="active">Me</span></h1>
       <div class="form-control-inputs">
